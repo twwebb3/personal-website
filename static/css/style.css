@@ -1,0 +1,41 @@
+/* Resets padding and margin to remove browser defaults */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensures the body takes full width */
+    height: 100%; /* Full height, useful if you want to use flex in body */
+}
+
+/* Full-width navigation bar styling */
+nav {
+    background-color: #007FFF; /* Example color: Electric Blue */
+    width: 100%; /* Nav spans the full width of the viewport */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
+}
+
+/* Styling unordered list as flex container to layout items horizontally */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers the menu items horizontally */
+    align-items: center; /* Aligns items vertically */
+}
+
+/* Style for each list item */
+nav ul li {
+    padding: 10px 20px; /* Padding for each menu item */
+}
+
+/* Link styling */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover effect for links */
+nav ul li a:hover {
+    text-decoration: underline;
+}
