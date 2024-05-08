@@ -1,16 +1,22 @@
 /* Resets padding and margin to remove browser defaults */
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%; /* Ensures the body takes full width */
-    height: 100%; /* Full height, useful if you want to use flex in body */
+    height: 100%; /* ensures full height */
+    margin: 0; /* removes default margin */
+    padding: 0; /* removes default padding */
+    width: 100%; /* ensures full width */
+    padding-top: 60px;
 }
 
 /* Full-width navigation bar styling */
 nav {
     background-color: #007FFF; /* Example color: Electric Blue */
-    width: 100%; /* Nav spans the full width of the viewport */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
+    width: 100%; /* Ensures the nav spans the full width of the viewport */
+    position: fixed; /* Keeps the nav bar fixed at the top of the screen */
+    top: 0; /* Aligns the nav bar at the top */
+    left: 0; /* Aligns the nav bar to the left side of the viewport */
+    z-index: 1000; /* Keeps the nav on top of other content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds shadow for depth */
+    height: 50px; /* Sets a fixed height for the nav bar */
 }
 
 /* Styling unordered list as flex container to layout items horizontally */
@@ -18,6 +24,7 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    height: 100%; /* Takes the full height of the nav bar */
     display: flex;
     justify-content: center; /* Centers the menu items horizontally */
     align-items: center; /* Aligns items vertically */
@@ -39,3 +46,59 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+
+
+/* Main content styling */
+.main-content {
+    margin-top: 60px;
+    display: flex; /* enables flexbox for content wrapper */
+    justify-content: center; /* center horizontally */
+    align-items: center; /* aligns children vertically in the center */
+    flex-wrap: wrap; /* allows items to wrap on smaller screens */
+    max-width: 1200px; /* max width of the wrapper */
+    width: 100%; /* ensures it spans the width */
+    padding: 20px; /* adds some padding around */
+    box-sizing: border-box; /* includes padding in width calculation */
+    margin-top: 60px; /* Add margin to top to push it below the nav bar */
+}
+
+/* Apply flexbox container styles to .main-content only, not to body */
+.main-content {
+    margin-top: 60px; /* Add margin to top to push it below the nav bar */
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* Profile image styling */
+.profile-img {
+    width: 302px; /* width of the image */
+    height: 403px; /* height of the image */
+    object-fit: cover; /* ensures the image covers the set dimensions */
+    margin-right: 20px; /* adds some space to the right of the image */
+}
+
+/* Welcome statement styling */
+.welcome-statement {
+    max-width: 600px; /* maximum width of the text area */
+    margin-left: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* stacks items vertically */
+    }
+
+    .profile-img, .welcome-statement {
+        width: 90%; /* makes image and text take 90% of screen width */
+        max-width: none; /* overrides any max-width set earlier */
+        text-align: center;
+        margin-right: 0;
+    }
+}
+/* Adjustments for image and welcome statement same as previous */
