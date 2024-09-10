@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+<header>
+    <h1>Theodore Webb</h1>
+    <p>Senior Data Scientist</p>
+</header>
+
+<section id="experience">
+    <h2>Work Experience</h2>
+    
+    <article>
+        <h3>Marriott Vacations Worldwide</h3>
+        <p>Senior Data Scientist</p>
+        <p>11/2021 - Present</p>
+        <ul>
+            <li>Lead in developing and deploying machine learning models to improve targeted marketing, sales, and customer retention.</li>
+            <li>Dive into millions of survey comments and customer service chats using natural language processing to classify, quantify, and better understand customer needs.</li>
+            <li>Create text classification models to improve automated chatbot responses.</li>
+            <li>Develop ad spend optimization models and package them in user friendly applications to direct optimal digital ad spend.</li>
+            <li>Conduct A/B tests to assess model performance in production.</li>
+            <li>Forecast P&L outcomes to guide budget and revenue strategy.</li>
+            <li>Use Bitbucket Git repositories to see project codebases to completion.</li>
+        </ul>
+    </article>
+
+    <article>
+        <h3>Deloitte Consulting, LLP</h3>
+        <p>Data Scientist</p>
+        <p>05/2020 - 11/2021</p>
+        <ul>
+            <li>Developed machine learning models to contribute to proactive planning and risk management.</li>
+            <li>Created and deployed deep learning models to classify unstructured text.</li>
+            <li>Led and advised Python developers in writing code to create data pipelines and predictive models.</li>
+            <li>Used Docker to containerize and deploy models and data pipeline codebases.</li>
+            <li>Wrote complex SQL queries to create simple views for Tableau and Looker dashboards.</li>
+            <li>Used AWS CodeCommit Git repositories to ensure efficient version control.</li>
+        </ul>
+    </article>
+
+    <article>
+        <h3>Marriott Vacations Worldwide</h3>
+        <p>Senior Data Scientist</p>
+        <p>02/2018 - 05/2020</p>
+        <ul>
+            <li>Lead in developing and deploying machine learning models to improve targeted marketing, sales, and customer retention.</li>
+            <li>Dive into millions of survey comments and customer service chats using natural language processing to classify, quantify, and better understand customer needs.</li>
+            <li>Create text classification models to improve automated chatbot responses.</li>
+            <li>Develop ad spend optimization models and package them in user friendly applications to direct optimal digital ad spend.</li>
+            <li>Conduct A/B tests to assess model performance in production.</li>
+            <li>Forecast P&L outcomes to guide budget and revenue strategy.</li>
+            <li>Use Bitbucket Git repositories to see project codebases to completion.</li>
+        </ul>
+    </article>
+
+    <article>
+        <h3>State of Florida Agency for Health Care Administration</h3>
+        <p>Senior Statistician (Senior Management Analyst II)</p>
+        <p>04/2016 - 02/2018</p>
+        <ul>
+            <li>Forecasted the $26 billion Florida Medicaid budget and caseload.</li>
+        </ul>
+    </article>
+
+    <article>
+        <h3>State of Florida Agency for Health Care Administration</h3>
+        <p>Junior Statistician (Research and Statistics Consultant)</p>
+        <p>10/2015 - 04/2016</p>
+        <ul>
+            <li>Developed predictive models to estimate the fiscal impact of proposed policy changes.</li>
+        </ul>
+    </article>
+
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <article>
+        <h3>Suffolk University</h3>
+        <p>Master of Science (MS), Economics</p>
+        <p>09/2012 - 05/2014</p>
+    </article>
+
+    <article>
+        <h3>Florida State University</h3>
+        <p>Bachelor of Science (BS), Economics</p>
+        <p>06/2009 - 04/2012</p>
+    </article>
+</section>
+
+{% endblock content %}
