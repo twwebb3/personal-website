@@ -16,7 +16,7 @@ header h1 {
     margin: 20px 0;
 }
 
-#experience article {
+#detail article {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
@@ -25,26 +25,7 @@ header h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#experience article:hover {
+#detail article:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-#education ul {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0;
-}
-
-#education li {
-    background-color: #ecf0f1;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#education li:hover {
-    background-color: #bdc3c7;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
