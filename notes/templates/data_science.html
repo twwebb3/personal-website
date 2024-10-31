@@ -1,0 +1,12 @@
+<!-- notes/templates/notes/data_science.html -->
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="data-science-container">
+    <h1>Data Science</h1>
+    <p>Welcome to my Data Science notes section. Here you'll find various resources and insights related to data science.</p>
+    <a href="{% url 'notes:index' %}" class="back-link">← Back to Notes</a>
+</div>
+{% endblock content %}

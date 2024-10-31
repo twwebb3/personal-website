@@ -1,0 +1,45 @@
+/* Center all h1 elements */
+h1 {
+    text-align: center;
+}
+
+/* Global Box-Sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Card Container Styling */
+.card-container {
+    display: flex;                /* Establishes Flexbox layout */
+    flex-wrap: wrap;              /* Allows cards to wrap onto multiple lines */
+    justify-content: center;      /* Centers cards horizontally */
+    gap: 20px;                    /* Space between cards */
+    padding: 20px;                /* Padding around the container */
+    max-width: 1200px;            /* Maximum width of the container */
+    margin: 40px auto 0 auto;     /* Top margin to account for fixed navbar */
+}
+
+/* Individual Card Styling */
+.card {
+    background-color: #f9f9f9;    /* Light background color */
+    border: 1px solid #ddd;       /* Light border */
+    border-radius: 8px;           /* Rounded corners */
+    padding: 20px;                /* Inner padding */
+    width: calc(50% - 20px);      /* Two cards per row minus the gap */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s;   /* Smooth hover effect */
+}
+
+/* Hover Effect for Cards */
+.card:hover {
+    transform: translateY(-5px);  /* Slight lift on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card {
+        width: calc(100% - 20px);  /* One card per row on smaller screens */
+    }
+}
