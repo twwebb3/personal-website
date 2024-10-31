@@ -3,3 +3,4 @@ venv/
 __pycache__
 .idea/
 staticfiles/
+.DS_Store
