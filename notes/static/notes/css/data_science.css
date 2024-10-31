@@ -1,0 +1,35 @@
+/* notes/static/notes/css/data_science.css */
+
+.data-science-container {
+    max-width: 800px;
+    margin: 100px auto 0 auto; /* Top margin accounts for fixed navbar */
+    padding: 20px;
+    background-color: #f0f8ff; /* Alice Blue background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.data-science-container h1 {
+    color: #007FFF; /* Electric Blue */
+    margin-bottom: 20px;
+}
+
+.data-science-container p {
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007FFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
