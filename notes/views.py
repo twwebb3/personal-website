@@ -8,3 +8,6 @@ class NotesPageView(TemplateView):
 class DataSciencePageView(TemplateView):
     template_name = 'data_science.html'
 
+class ProgrammingPageView(TemplateView):
+    template_name = 'programming.html'
+
