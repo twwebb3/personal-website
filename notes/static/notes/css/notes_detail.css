@@ -96,6 +96,11 @@
     margin-bottom: 10px;
 }
 
+.main-content h3 {
+    color: #0056b3; /* Darker Blue */
+    margin-bottom: 10px;
+}
+
 .main-content p {
     color: #333;
     font-size: 1.1em;

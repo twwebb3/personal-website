@@ -4,7 +4,7 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'notes/css/data_science.css' %}">
+<link rel="stylesheet" href="{% static 'notes/css/notes_detail.css' %}">
 {% endblock extra_css %}
 
 
@@ -25,17 +25,26 @@
         <ul>
             <li><a href="#introduction">Introduction</a></li>
             <li>
-                <a href="#data-analysis">Data Analysis</a>
+                <a href="#response-modeling">Response Modeling</a>
                 <ul>
-                    <li><a href="#exploratory-data-analysis">Exploratory Data Analysis</a></li>
-                    <li><a href="#data-visualization">Data Visualization</a></li>
+                    <li><a href="#response-overall">Exploratory Data Analysis</a></li>
+                    <li>
+                        <a href="#response-detail">Data Visualization</a>
+                        <ul>
+                            <li><a href="#response-detail-preprocessing">Preprocessing</a></li>
+                            <li><a href="#response-detail-modeling">Modeling</a></li>
+                            <li><a href="#response-detail-testing">Testing</a></li>
+                            <li><a href="#response-detail-deployment">Deployment</a></li>
+                            <li><a href="#response-detail-monitoring">Monitoring and Refreshing</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li>
-                <a href="#machine-learning">Machine Learning</a>
+                <a href="#nlp">Natural Language Processing</a>
                 <ul>
-                    <li><a href="#supervised-learning">Supervised Learning</a></li>
-                    <li><a href="#unsupervised-learning">Unsupervised Learning</a></li>
+                    <li><a href="#sentiment-analysis">Sentiment Analysis</a></li>
+                    <li><a href="#language-classification">Language Classification</a></li>
                 </ul>
             </li>
             <li><a href="#conclusion">Conclusion</a></li>
@@ -48,23 +57,43 @@
             <p>Welcome to my Data Science notes section. Here you'll find various resources and insights related to data science.</p>
         </section>
 
-        <section id="data-analysis">
-            <h1>Data Analysis</h1>
+        <section id="response-modeling">
+            <h1>Response Modeling</h1>
             <p>Data analysis is a crucial step in the data science process. It involves inspecting, cleansing, transforming, and modeling data to discover useful information, inform conclusions, and support decision-making.</p>
 
-            <section id="exploratory-data-analysis">
-                <h2>Exploratory Data Analysis</h2>
+            <section id="response-overall">
+                <h2>Overall Approach</h2>
                 <p>Exploratory Data Analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often using visual methods. It helps in understanding the data before applying more complex statistical techniques.</p>
             </section>
 
-            <section id="data-visualization">
-                <h2>Data Visualization</h2>
+            <section id="response-detail">
+                <h2>Detailed Approach</h2>
                 <p>Data visualization involves representing data in graphical formats like charts, graphs, and maps. It helps in identifying patterns, trends, and outliers in data, making complex data more accessible and understandable.</p>
+                <section id="response-detail-preprocessing">
+                    <h3>Preprocessing</h3>
+                    <p>Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. It includes cleaning, normalization, transformation, and reduction of data to prepare it for analysis.</p>
+                </section>
+                <section id="response-detail-modeling">
+                    <h3>Modeling</h3>
+                    <p>Data modeling is the process of creating a data model for an information system by applying formal data modeling techniques. It involves defining and analyzing data requirements needed to support the business processes within the scope of corresponding information systems.</p>
+                </section>
+                <section id="response-detail-testing">
+                    <h3>Testing</h3>
+                    <p>Data testing is the process of validating and verifying data to ensure data quality, accuracy, and reliability. It involves checking data for consistency, completeness, correctness, and compliance with business rules and requirements.</p>
+                </section>
+                <section id="response-detail-deployment">
+                    <h3>Deployment</h3>
+                    <p>Data deployment is the process of implementing data models and solutions into production environments. It involves deploying models, algorithms, and data pipelines to make them accessible to end-users and applications.</p>
+                </section>
+                <section id="response-detail-monitoring">
+                    <h3>Monitoring and Refreshing</h3>
+                    <p>Data monitoring is the process of tracking and analyzing data to ensure its quality, integrity, and security. It involves monitoring data pipelines, models, and applications to detect issues, anomalies, and deviations from expected behavior.</p>
+                </section>
             </section>
         </section>
 
-        <section id="machine-learning">
-            <h1>Machine Learning</h1>
+        <section id="nlp">
+            <h1>Natural Language Processing</h1>
             <p>Machine Learning (ML) is a subset of artificial intelligence that focuses on building systems that can learn from and make decisions based on data. It involves algorithms and statistical models to perform tasks without explicit instructions.</p>
 
             <section id="supervised-learning">
