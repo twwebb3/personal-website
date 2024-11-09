@@ -1,24 +1,105 @@
 /* notes/static/notes/css/data_science.css */
 
+
+.sub-header h1 {
+    text-align: center;
+}
+
+.sub-header h3 {
+    color: #007FFF; /* Electric Blue */
+    text-align: center;
+}
+
+/* Flexbox Container */
 .data-science-container {
-    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 1200px;
     margin: 100px auto 0 auto; /* Top margin accounts for fixed navbar */
     padding: 20px;
     background-color: #f0f8ff; /* Alice Blue background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table of Contents (Sidebar) */
+.toc {
+    flex: 1 1 200px; /* Flex-grow:1, Flex-shrink:1, Flex-basis:200px */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 80px; /* Adjust based on navbar height */
+    height: fit-content;
+}
+
+.toc h2 {
+    color: #007FFF; /* Electric Blue */
+    margin-bottom: 15px;
     text-align: center;
 }
 
-.data-science-container h1 {
-    color: #007FFF; /* Electric Blue */
-    margin-bottom: 20px;
+.toc ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-.data-science-container p {
+.toc ul li {
+    margin-bottom: 10px;
+}
+
+.toc ul li a {
+    text-decoration: none;
+    color: #007FFF;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.toc ul li a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+.toc ul li ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.toc ul li ul li a {
+    font-weight: normal;
+    color: #333;
+}
+
+.toc ul li ul li a:hover {
+    color: #007FFF;
+}
+
+/* Main Content */
+.main-content {
+    flex: 3 1 600px; /* Flex-grow:3, Flex-shrink:1, Flex-basis:600px */
+}
+
+.main-content section {
+    margin-bottom: 40px;
+}
+
+.main-content h1 {
+    color: #007FFF; /* Electric Blue */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main-content h2 {
+    color: #0056b3; /* Darker Blue */
+    margin-bottom: 10px;
+}
+
+.main-content p {
     color: #333;
     font-size: 1.1em;
-    margin-bottom: 30px;
+    line-height: 1.6;
 }
 
 .back-link {
@@ -32,4 +113,20 @@
 
 .back-link:hover {
     color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .data-science-container {
+        flex-direction: column;
+    }
+
+    .toc {
+        position: relative;
+        top: 0;
+    }
+
+    .main-content {
+        flex: none;
+    }
 }

@@ -3,10 +3,87 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'notes/css/data_science.css' %}">
+{% endblock extra_css %}
+
+
+
 {% block content %}
-<div class="data-science-container">
+
+<div class="sub-header">
     <h1>Data Science</h1>
-    <p>Welcome to my Data Science notes section. Here you'll find various resources and insights related to data science.</p>
-    <a href="{% url 'notes' %}" class="back-link">← Back to Notes</a>
+    <h3>
+        <a href="{% url 'notes' %}" class="back-link">← Back to Notes</a>
+    </h3>
+</div>
+
+
+<div class="data-science-container">
+    <aside class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li>
+                <a href="#data-analysis">Data Analysis</a>
+                <ul>
+                    <li><a href="#exploratory-data-analysis">Exploratory Data Analysis</a></li>
+                    <li><a href="#data-visualization">Data Visualization</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#machine-learning">Machine Learning</a>
+                <ul>
+                    <li><a href="#supervised-learning">Supervised Learning</a></li>
+                    <li><a href="#unsupervised-learning">Unsupervised Learning</a></li>
+                </ul>
+            </li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <section id="introduction">
+            <h1>Introduction</h1>
+            <p>Welcome to my Data Science notes section. Here you'll find various resources and insights related to data science.</p>
+        </section>
+
+        <section id="data-analysis">
+            <h1>Data Analysis</h1>
+            <p>Data analysis is a crucial step in the data science process. It involves inspecting, cleansing, transforming, and modeling data to discover useful information, inform conclusions, and support decision-making.</p>
+
+            <section id="exploratory-data-analysis">
+                <h2>Exploratory Data Analysis</h2>
+                <p>Exploratory Data Analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often using visual methods. It helps in understanding the data before applying more complex statistical techniques.</p>
+            </section>
+
+            <section id="data-visualization">
+                <h2>Data Visualization</h2>
+                <p>Data visualization involves representing data in graphical formats like charts, graphs, and maps. It helps in identifying patterns, trends, and outliers in data, making complex data more accessible and understandable.</p>
+            </section>
+        </section>
+
+        <section id="machine-learning">
+            <h1>Machine Learning</h1>
+            <p>Machine Learning (ML) is a subset of artificial intelligence that focuses on building systems that can learn from and make decisions based on data. It involves algorithms and statistical models to perform tasks without explicit instructions.</p>
+
+            <section id="supervised-learning">
+                <h2>Supervised Learning</h2>
+                <p>Supervised learning algorithms build a mathematical model based on a dataset that contains both the inputs and the desired outputs. The goal is for the model to make accurate predictions on new, unseen data.</p>
+            </section>
+
+            <section id="unsupervised-learning">
+                <h2>Unsupervised Learning</h2>
+                <p>Unsupervised learning algorithms analyze and cluster unlabeled data to discover hidden patterns or intrinsic structures in the input data. It is commonly used for clustering and association tasks.</p>
+            </section>
+        </section>
+
+        <section id="conclusion">
+            <h1>Conclusion</h1>
+            <p>In conclusion, data science is a multifaceted field that combines domain expertise, programming skills, and knowledge of mathematics and statistics to extract meaningful insights from data. Continuous learning and adaptation are key to staying effective in this ever-evolving domain.</p>
+        </section>
+
+        <a href="{% url 'notes' %}" class="back-link">← Back to Notes</a>
+    </main>
 </div>
 {% endblock content %}

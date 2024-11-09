@@ -3,6 +3,15 @@ h1 {
     text-align: center;
 }
 
+.sub-header h1 {
+    text-align: center;
+}
+
+.sub-header h3 {
+    color: #007FFF; /* Electric Blue */
+    text-align: center;
+}
+
 /* Global Box-Sizing */
 *,
 *::before,
