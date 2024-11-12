@@ -11,3 +11,7 @@ class DataSciencePageView(TemplateView):
 class ProgrammingPageView(TemplateView):
     template_name = 'programming.html'
 
+class DataEngineeringPageView(TemplateView):
+    template_name = 'data_engineering.html'
+
+

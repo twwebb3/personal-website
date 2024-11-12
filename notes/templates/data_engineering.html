@@ -1,0 +1,167 @@
+<!-- notes/templates/notes/data_science.html -->
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'notes/css/notes_detail.css' %}">
+{% endblock extra_css %}
+
+
+
+{% block content %}
+
+<div class="sub-header">
+    <h1>Data Engineering</h1>
+    <h3>
+        <a href="{% url 'notes' %}" class="back-link">← Back to Notes</a>
+    </h3>
+</div>
+
+
+<div class="data-science-container">
+    <aside class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li>
+                <a href="#pipelines">Pipelines</a>
+                <ul>
+                    <li>
+                        <a href="#pipelines-overall">Overall Process</a>
+                        <ul>
+                            <li><a href="#pipelines-docker">Docker</a></li>
+                            <li><a href="#pipelines-scheduling">Scheduling</a></li>
+                            <li><a href="#piplines-staging">Staging</a></li>
+                            <li><a href="#pipelines-loading">Loading</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pipelines-api">API Calls</a>
+                        <ul>
+                            <li><a href="#pipelines-api-reddit">Reddit</a></li>
+                            <li><a href="#pipelines-api-twitter">Twitter</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pipelines-requests">HTTP Requests</a>
+                        <ul>
+                            <li><a href="#pipelines-requests-how">How?</a></li>
+                            <li><a href="#pipelines-requests-examples">Examples</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pipelines-scraping">Web Scraping</a>
+                        <ul>
+                            <li><a href="#pipelines-scraping-robots">robots.txt</a></li>
+                            <li><a href="#pipelines-scraping-bs4">Beautiful Soup</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#databases">Databases</a>
+                <ul>
+                    <li><a href="#databases-sqlite">SQLite</a></li>
+                    <li><a href="#databases-postgres">PostgreSQL</a></li>
+                    <li><a href="#databases-snowflake">Snowflake</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <section id="introduction">
+            <h1>Introduction</h1>
+            <p>Welcome to my Data Science notes section. Here you'll find various resources and insights related to data science.</p>
+        </section>
+
+        <section id="pipelines">
+            <h1>pipelines</h1>
+            <p>Data analysis is a crucial step in the data science process. It involves inspecting, cleansing, transforming, and modeling data to discover useful information, inform conclusions, and support decision-making.</p>
+
+            <section id="pipelines-overall">
+                <h2>Overall Approach</h2>
+                <p>Exploratory Data Analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often using visual methods. It helps in understanding the data before applying more complex statistical techniques.</p>
+                <section id="pipelines-docker">
+                    <h3>Docker</h3>
+                    <p>Docker is a platform for developing, shipping, and running applications in containers. It provides a consistent environment for applications to run in, making it easier to build, deploy, and scale applications across different environments.</p>
+                </section>
+                <section id="pipelines-scheduling">
+                    <h3>Scheduling</h3>
+                    <p>Data scheduling is the process of automating the execution of data pipelines, workflows, and tasks. It involves defining dependencies, triggers, and schedules to ensure data processing and analysis are performed at the right time and in the right order.</p>
+                </section>
+                <section id="pipelines-staging">
+                    <h3>Staging</h3>
+                    <p>Data staging is the process of preparing and storing data for analysis. It involves extracting, transforming, and loading data into staging areas or tables to facilitate data processing, cleansing, and transformation before loading it into data warehouses or data marts.</p>
+                </section>
+                <section id="pipelines-loading">
+                    <h3>Loading</h3>
+                    <p>Data loading is the process of transferring data from source systems to target systems. It involves extracting data from source systems, transforming it into a suitable format, and loading it into data warehouses, data marts, or other storage systems for analysis and reporting.</p>
+                </section>
+            </section>
+
+            <section id="pipelines-api">
+                <h2>API Calls</h2>
+                <p>Data visualization involves representing data in graphical formats like charts, graphs, and maps. It helps in identifying patterns, trends, and outliers in data, making complex data more accessible and understandable.</p>
+                <section id="pipelines-api-reddit">
+                    <h3>Reddit</h3>
+                    <p>Reddit API call detail.</p>
+                </section>
+                <section id="pipelines-api-twitter">
+                    <h3>Twitter</h3>
+                    <p>Twitter API call detail.</p>
+                </section>
+            </section>
+
+            <section id="pipelines-requests">
+                <h2>HTTP Requests</h2>
+                <p>HTTP (Hypertext Transfer Protocol) is the foundation of data communication on the World Wide Web. It is a protocol that defines how messages are formatted and transmitted between web servers and clients, enabling the exchange of text, images, videos, and other data.</p>
+                <section id="pipelines-requests-how">
+                    <h3>How?</h3>
+                    <p>HTTP requests are messages sent by a client to a server to request data or actions. They consist of a request line, headers, and an optional body. The request line specifies the HTTP method, URL, and protocol version, while the headers provide additional information about the request.</p>
+                </section>
+                <section id="pipelines-requests-examples">
+                    <h3>Examples</h3>
+                    <p>Common HTTP methods include GET, POST, PUT, DELETE, and PATCH. GET requests retrieve data from a server, POST requests submit data to a server, PUT requests update data on a server, DELETE requests remove data from a server, and PATCH requests partially update data on a server.</p>
+                </section>
+            </section>
+
+            <section id="pipelines-scraping">
+                <h2>Web Scraping</h2>
+                <p>Web scraping is the process of extracting data from websites. It involves fetching web pages, parsing their content, and extracting useful information for analysis or storage. Web scraping can be done manually or using automated tools and techniques.</p>
+                <section id="pipelines-scraping-robots">
+                    <h3>robots.txt</h3>
+                    <p>robots.txt is a file that webmasters create to instruct web robots how to crawl and index pages on their website. It specifies which parts of the website are allowed or disallowed to be crawled by search engine bots and other web crawlers.</p>
+                </section>
+                <section id="pipelines-scraping-bs4">
+                    <h3>Beautiful Soup</h3>
+                    <p>Beautiful Soup is a Python library for pulling data out of HTML and XML files. It provides tools for navigating, searching, and modifying the parse tree created by a parser like lxml or html5lib. Beautiful Soup makes it easy to scrape web pages and extract data for analysis.</p>
+                </section>
+            </section>
+        </section>
+
+        <section id="databases">
+            <h1>Databases</h1>
+            <p>Below are some notes on various databases I've built pipelines for and used extensively. SQLite is only mentioned to call out it's limitations and use for prototyping.</p>
+
+            <section id="databases-sqlite">
+                <h2>SQLite</h2>
+                <p>Limitations</p>
+            </section>
+
+            <section id="databases-postgres">
+                <h2>PostgreSQL</h2>
+                <p>Why?</p>
+            </section>
+
+            <section id="databases-snowflake">
+                <h2>Snowflake</h2>
+                <p>Advantages</p>
+            </section>
+        </section>
+
+        <a href="{% url 'notes' %}" class="back-link">← Back to Notes</a>
+    </main>
+</div>
+{% endblock content %}
