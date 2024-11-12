@@ -25,7 +25,8 @@
 
 /* Table of Contents (Sidebar) */
 .toc {
-    flex: 1 1 200px; /* Flex-grow:1, Flex-shrink:1, Flex-basis:200px */
+    flex: 1 1 150px; /* Flex-grow:1, Flex-shrink:1, Flex-basis:200px */
+    max-width: 180px;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
