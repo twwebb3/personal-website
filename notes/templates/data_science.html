@@ -27,9 +27,9 @@
             <li>
                 <a href="#response-modeling">Response Modeling</a>
                 <ul>
-                    <li><a href="#response-overall">Exploratory Data Analysis</a></li>
+                    <li><a href="#response-overall">Overall Approach</a></li>
                     <li>
-                        <a href="#response-detail">Data Visualization</a>
+                        <a href="#response-detail">Detailed Approach</a>
                         <ul>
                             <li><a href="#response-detail-preprocessing">Preprocessing</a></li>
                             <li><a href="#response-detail-modeling">Modeling</a></li>
@@ -57,16 +57,39 @@
     <main class="main-content">
         <section id="introduction">
             <h1>Introduction</h1>
-            <p>Welcome to my Data Science notes section. Here you'll find various resources and insights related to data science.</p>
+            <p>Welcome to my Data Science notes section. Here you'll notes on how I approach and think about data science.</p>
         </section>
 
         <section id="response-modeling">
             <h1>Response Modeling</h1>
-            <p>Data analysis is a crucial step in the data science process. It involves inspecting, cleansing, transforming, and modeling data to discover useful information, inform conclusions, and support decision-making.</p>
+            <p>
+                Response, or binary classification, modeling is often the solution to picking the lowest hanging fruit
+                when solving business problems with machine learning models. The target is a simple binary outcome: did
+                an event occur or did it not? This event can be anything from a customer making a purchase to responding
+                to a marketing offer. The goal is to predict the probability of the event occuring based on available
+                data. The probability score can then be used to improve targeting and optimize resources. Target those
+                that are more likely to desire being targeted, and do not bother those that are not.
+            </p>
 
             <section id="response-overall">
                 <h2>Overall Approach</h2>
-                <p>Exploratory Data Analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often using visual methods. It helps in understanding the data before applying more complex statistical techniques.</p>
+                <p>
+                    Here I'll provide a high-level overview of the approach I take when building response models. We'll
+                    assume we have the data we need in a SQL table/view or CSV, and it is roughly ready to start
+                    building models on.
+                </p>
+                <ol>
+                    <li>Prepocessing</li>
+                    <ol>
+                        <li>Convert the target to 1 and 0 values, 1 for the desired outcome.</li>
+                        <li>
+                            Split the data into train, test, and validation sets. For more detail see <a href="#response-detail-preprocessing">here</a>.
+                        </li>
+                        <li>Handle missing values: impute or drop them.</li>
+                        <li>Convert categorical fields to binary/dummy variables.</li>
+                        <li>Scale continuous variables in the training set, and use the same scaling factors on test and validation sets.</li>
+                    </ol>
+                </ol>
             </section>
 
             <section id="response-detail">
