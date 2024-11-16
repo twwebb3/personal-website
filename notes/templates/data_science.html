@@ -89,6 +89,46 @@
                         <li>Convert categorical fields to binary/dummy variables.</li>
                         <li>Scale continuous variables in the training set, and use the same scaling factors on test and validation sets.</li>
                     </ol>
+
+                    <li>Modeling</li>
+                    <ol>
+                        <li>
+                            Feature Selection: this is an iterative process. Use domain knowledge and start with a core
+                            group of features, and expand from there based on performance.
+                        </li>
+                        <li>
+                            Logistic Regression: a simple model that is easy to interpret and can be used as a baseline.
+                            If the data are fairly balanced and the relationship between the features and the target is
+                            linear, this model can be a good choice. It is also a good choice when the goal is to
+                            understand the relationship between the features and the target. It is not a good choice when
+                            the relationship is non-linear.
+                        </li>
+                        <li>
+                            Random Forest: after trying logistic regression, try a random forest model. Do not do any
+                            hyperparameter tuning yet. Evaluate and note the performance on the test set.
+                        </li>
+                        <li>
+                            Gradient Boosting: after trying random forest, try a gradient boosting model. Do not do any
+                            hyperparameter tuning yet. Evaluate and note the performance on the test set. There are
+                            many options: XGBoost, LightGBM, CatBoost, etc. Try them all and see which one performs best.
+                        </li>
+                        <li>
+                            Now that you tried multiple models, pick the one with the best metrics on the test set. For
+                            me, this has usually been XGBoost. Whichever it is, proceed with hyperparameter tuning. We'll
+                            go into more detail on this in the <a href="#response-detail-modeling">detailed approach</a>
+                            section, but the broad approach is to tune hyperparameters to the point of overfitting (when
+                            the model performs better on the training set than the test set), and then dial back a bit.
+                        </li>
+                        <li>
+                            Once you arrive at a good metrics on the test set, evaluate the model on the validation set.
+                            If the model performs well on the validation set move on to the next step. If not, start over.
+                        </li>
+                    </ol>
+
+                    <li>Testing</li>
+                    <ol>
+                        <li></li>
+                    </ol>
                 </ol>
             </section>
 
