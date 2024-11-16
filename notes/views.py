@@ -14,4 +14,5 @@ class ProgrammingPageView(TemplateView):
 class DataEngineeringPageView(TemplateView):
     template_name = 'data_engineering.html'
 
-
+class PythonPageView(TemplateView):
+    template_name = 'programming/python.html'
