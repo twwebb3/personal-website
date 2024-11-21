@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'notes/css/notes_detail.css' %}">
+{% endblock extra_css %}
+
+
+
+{% block content %}
+
+<div class="sub-header">
+    <h1>R</h1>
+    <h3>
+        <a href="{% url 'programming' %}" class="back-link">← Back to Programming and Development</a>
+    </h3>
+</div>
+
+<div class="detail-container">
+    <aside class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#rstudio">RStudio</a></li>
+            <li><a href="#tidyverse">Tidyverse</a></li>
+            <li><a href="#ggplot">ggplot2</a></li>
+            <li><a href="#lubridate">lubridate</a></li>
+        </ul>
+    </aside>
+
+    <div class="main-content">
+        <section id="rstudio">
+            <h2>RStudio</h2>
+            <p>I've been using RStudio since 2013, it's the only way to use R</p>
+        </section>
+
+    </div>
+</div>
+
+
+{% endblock content %}

@@ -16,3 +16,8 @@ class DataEngineeringPageView(TemplateView):
 
 class PythonPageView(TemplateView):
     template_name = 'programming/python.html'
+
+class RstatsPageView(TemplateView):
+    template_name = "programming/rstats.html"
+
+
