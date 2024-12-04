@@ -41,14 +41,14 @@
                 </ul>
             </li>
             <li>
+                <a href="#a-b-testing">A/B Testing</a>
+            </li>
+            <li>
                 <a href="#nlp">Natural Language Processing</a>
                 <ul>
                     <li><a href="#sentiment-analysis">Sentiment Analysis</a></li>
-                    <li><a href="#language-classification">Language Classification</a></li>
+                    <li><a href="#text-classification">Text Classification</a></li>
                 </ul>
-            </li>
-            <li>
-                <a href="#a-b-testing">A/B Testing</a>
             </li>
             <li><a href="#conclusion">Conclusion</a></li>
         </ul>
@@ -57,7 +57,7 @@
     <main class="main-content">
         <section id="introduction">
             <h1>Introduction</h1>
-            <p>Welcome to my Data Science notes section. Here you'll notes on how I approach and think about data science.</p>
+            <p>Welcome to my Data Science notes section. Here you'll find notes on how I approach and think about data science.</p>
         </section>
 
         <section id="response-modeling">
@@ -115,7 +115,7 @@
                         <li>
                             Now that you tried multiple models, pick the one with the best metrics on the test set. For
                             me, this has usually been XGBoost. Whichever it is, proceed with hyperparameter tuning. We'll
-                            go into more detail on this in the <a href="#response-detail-modeling">detailed approach</a>
+                            go into more detail on this in the <a href="#response-detail-modeling">modeling detailed approach</a>
                             section, but the broad approach is to tune hyperparameters to the point of overfitting (when
                             the model performs better on the training set than the test set), and then dial back a bit.
                         </li>
@@ -126,15 +126,39 @@
                     </ol>
 
                     <li>Testing</li>
+                    <p>
+                        The hardest part of testing is getting stakeholder buy-in. Often once you present validation
+                        results and the metrics mentioned above, stakeholders will be all in and want to deploy the
+                        model on every customer. Fair enough, this is how medicine works, but the fundamentally
+                        difference is we are operating in an ever-changing ecosystem. What might have worked on the data
+                        you have today may not work going forward, and so we have to prove it works, and continue to
+                        prove that it works. This is where testing comes in. In an ideal scenario, we will:
+                    </p>
                     <ol>
-                        <li></li>
+                        <li>
+                            Identify your key metrics: what outcome are you trying to increase/improve?
+                        </li>
+                        <li>
+                            Split your data randomly on future targets:
+                            <ul>
+                                <li>Control group: receives status quo treatment.</li>
+                                <li>Test group: receives treatment based on the model.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Run the test for a predetermined amount of time, and then evaluate the results. Details on
+                            evaluation can be found in the <a href="#response-detail-testing">testing detailed approach</a>
+                            section.
+                        </li>
                     </ol>
                 </ol>
             </section>
 
             <section id="response-detail">
                 <h2>Detailed Approach</h2>
-                <p>Data visualization involves representing data in graphical formats like charts, graphs, and maps. It helps in identifying patterns, trends, and outliers in data, making complex data more accessible and understandable.</p>
+                <p>
+                    Here we'll go into more detail on the steps outlined in the <a href="#response-overall">overall approach</a>.
+                </p>
                 <section id="response-detail-preprocessing">
                     <h3>Preprocessing</h3>
                     <p>Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. It includes cleaning, normalization, transformation, and reduction of data to prepare it for analysis.</p>
@@ -158,25 +182,41 @@
             </section>
         </section>
 
-        <section id="nlp">
-            <h1>Natural Language Processing</h1>
-            <p>Machine Learning (ML) is a subset of artificial intelligence that focuses on building systems that can learn from and make decisions based on data. It involves algorithms and statistical models to perform tasks without explicit instructions.</p>
-
-            <section id="sentiment-analysis">
-                <h2>Sentiment Analysis</h2>
-                <p>Supervised learning algorithms build a mathematical model based on a dataset that contains both the inputs and the desired outputs. The goal is for the model to make accurate predictions on new, unseen data.</p>
-            </section>
-
-            <section id="language-classification">
-                <h2>Language Classification</h2>
-                <p>Unsupervised learning algorithms analyze and cluster unlabeled data to discover hidden patterns or intrinsic structures in the input data. It is commonly used for clustering and association tasks.</p>
-            </section>
-        </section>
-
         <section id="a-b-testing">
             <h1>A/B Testing</h1>
             <p>Why?</p>
         </section>
+
+        <section id="nlp">
+            <h1>Natural Language Processing</h1>
+            <p>
+                Natural Language Processing (NLP) is simply analyzing raw text data to extract useful information from
+                it. Most of my NLP work has been in working with survey and message forum comments. The sections below
+                will cover what is most relevant for those use cases. Namely, sentiment analysis and classification.
+            </p>
+
+            <section id="sentiment-analysis">
+                <h2>Sentiment Analysis</h2>
+                <p>
+                    Sentiment analysis is the process of analyzing text data to determine the sentiment expressed in it.
+                    Is it positive, negative, or neutral? This is useful for understanding customer feedback, and
+                    provides a further sense of how customers feel about a product or service. We will cover a few
+                    methods, progressing from basic to advanced solutions.
+                </p>
+            </section>
+
+            <section id="text-classification">
+                <h2>Text Classification</h2>
+                <p>
+                    Many of the methods mentioned below are obsolete now that we have cheap LLMs and basically free
+                    local LLM options like local llama. However, this is how it worked up until 2022-3. The end goal of
+                    text classification is to classify text into categories or topics. In the case of comments this is
+                    useful for quantifying what topics customers are users are talking about, and then showing their
+                    general sentiment on different topics.
+                </p>
+            </section>
+        </section>
+
 
         <section id="conclusion">
             <h1>Conclusion</h1>
