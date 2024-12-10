@@ -161,7 +161,52 @@
                 </p>
                 <section id="response-detail-preprocessing">
                     <h3>Preprocessing</h3>
-                    <p>Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. It includes cleaning, normalization, transformation, and reduction of data to prepare it for analysis.</p>
+                    <p>
+                        Getting the data prepared to train models.
+                    </p>
+
+                    <h4>The Target</h4>
+                    <p>
+                        Step one is to identify your target. This is an event that either did or did not occur. You will
+                        want a value of 1 for did occur and a value of 0 for did not occur. Then you will want data
+                        associated with this event, but only data on things known before the event occurred. Any data
+                        for things that occurred after this event are useless. Things known before the event will be
+                        used as features to predict the outcome.
+                    </p>
+
+                    <h4>Categorical Features</h4>
+                    <p>
+                        Categorical features will need to be converted to numerical values. This process has a few names:
+                        converting to binaries (statistics), converting to dummy variables (econometrics), and one-hot
+                        encoding (data science). The process is simple, just take fields that have categorical values
+                        and create new fields that are 1 or 0 for each category. An example is say region of residence,
+                        this could have values of 'North', 'South', 'East', and 'West'. So you simply create four new
+                        columns, say 'north_bin' which is 1 for when the original column has a value of 'North' and 0
+                        otherwise, and so on and so forth for the other three values. Pandas has a function for this
+                        called pd.get_dummies(). This is easiest done pre splitting your data, and there are not problems
+                        with info leaking across your data splits.
+                    </p>
+
+                    <h4>Splitting</h4>
+                    <p>
+                        Split your data into three sets: train, test, and validate. This can be done in two ways:
+                        <ol>
+                            <li>Randomly, into sizes of train=60%, test=20%, and validation=20%</li>
+                            <li>
+                                Based on time: train on everything previous to two years ago, test on the subsequent
+                                complete year, and validate on the final complete year.
+                            </li>
+                        </ol>
+                    </p>
+
+                    <h4>Scaling</h4>
+                    <p>
+                        The final step is to scale continuous features. Features like 'months since last purchase' can
+                        can range from 0 to however many months of data you have (say 120), or things like 'total spend'
+                        can go into the thousands or even more depending upon what you're looking at. These need to be
+                        scaled so that fields with higher values do not end up with more importance in predicting the
+                        outcome than fields with lower values. There are a few ways to do this:
+                    </p>
                 </section>
                 <section id="response-detail-modeling">
                     <h3>Modeling</h3>
