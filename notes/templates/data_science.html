@@ -222,6 +222,24 @@
                         case, it is still useful as a first pass to give you a gauge of how good the features you have
                         selected are.
                     </p>
+
+                    <h4>Random Forest</h4>
+                    <p>
+                        I'll skip decision trees, I've never used them for prediction, just for finding relationships in
+                        data that I do not yet fully understand. A Random Forest is a group of decision trees, that are
+                        fit simultaneously on the training set using different combinations of the features you specify,
+                        and ensembled together to get a final prediction. They work well with both binary and multi-class
+                        targets.
+                    </p>
+
+                    <h4>Gradient Boosting</h4>
+                    <p>
+                        There are a few different modules/methods of gradient boosting. I mainly use XGBoost, but it is
+                        worth trying CatBoost and LightGBM as well. The process is similar to Random Forest in that
+                        many trees are fit or regressions run to ensemble into a final prediction, but these are done
+                        sequentially instead of simultaneously. This means that the next tree is fit on the residuals
+                        of the previous tree/regression.
+                    </p>
                 </section>
                 <section id="response-detail-testing">
                     <h3>Testing</h3>
