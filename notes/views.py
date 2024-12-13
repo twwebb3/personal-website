@@ -20,4 +20,6 @@ class PythonPageView(TemplateView):
 class RstatsPageView(TemplateView):
     template_name = "programming/rstats.html"
 
+class GitPageView(TemplateView):
+    template_name = "programming/git.html"
 

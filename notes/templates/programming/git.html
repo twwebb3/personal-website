@@ -1,0 +1,59 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'notes/css/notes_detail.css' %}">
+{% endblock extra_css %}
+
+
+
+{% block content %}
+
+<div class="sub-header">
+    <h1>git</h1>
+    <h3>
+        <a href="{% url 'programming' %}" class="back-link">← Back to Programming and Development</a>
+    </h3>
+</div>
+
+<div class="detail-container">
+    <aside class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#gitignore">.gitignore</a></li>
+            <li><a href="#clone">clone</a></li>
+            <li><a href="#pull">pull</a></li>
+            <li><a href="#add">add</a></li>
+            <li><a href="#commit">commit</a></li>
+            <li><a href="#push">push</a></li>
+            <li><a href="#pull-requests">Pull Requests</a></li>
+        </ul>
+    </aside>
+
+    <div class="main-content">
+        <section id="introduction">
+            <h1>Introduction</h1>
+            <p>
+                There are many different offerings of git: GitHub, GitLab, Bitbucket, and more. I predominantly use
+                GitHub and Bitbucket, but I have used CodeCommit in the past. The fundamentals are the same across all
+                platforms, but the user interface and additional features differ. Below are notes on the fundamentals.
+                First though, what is git? git is a distributed version control system that allows for collaboration,
+                and is massively helpful with tracking changes in code (and reverting to the last working version when
+                you break something).
+            </p>
+        </section>
+
+        <section id="gitignore">
+            <h1>.gitignore</h1>
+            <p>
+                Filler text.
+            </p>
+        </section>
+
+    </div>
+</div>
+
+
+{% endblock content %}
