@@ -48,8 +48,31 @@
         <section id="gitignore">
             <h1>.gitignore</h1>
             <p>
-                Filler text.
+                This is a file telling git what not to upload to the repository from your local machine, it should
+                include everything that you do not want publicly available and then potentially some more. In a
+                .gitignore file you simply list files and directories you do not want tracked by git. Every file or
+                directory on its own line. Below is a list of things I typically include in a .gitignore:
             </p>
+            <ul>
+                <li>venv/</li>
+                <li>.idea/</li>
+                <li>__pycache__/</li>
+                <li>.DS_Store</li>
+                <li>*.sqlite3</li>
+                <li>.env</li>
+                <li>data/</li>
+                <li>*.xlsx</li>
+                <li>*.csv</li>
+            </ul>
+            <p>
+                For reference, '*.file_extension' ignores every file with that extension, and 'directory/' ignores every
+                thing in that directory. This list isn't exhaustive, and different types of projects will have varying
+                needs for what to include in a .gitignore.
+            </p>
+        </section>
+
+        <section id="clone">
+            <h1>clone</h1>
         </section>
 
     </div>
