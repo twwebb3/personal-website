@@ -22,6 +22,7 @@
         <h2>Table of Contents</h2>
         <ul>
             <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#ssh">ssh</a></li>
             <li><a href="#gitignore">.gitignore</a></li>
             <li><a href="#clone">clone</a></li>
             <li><a href="#pull">pull</a></li>
@@ -43,6 +44,19 @@
                 and is massively helpful with tracking changes in code (and reverting to the last working version when
                 you break something).
             </p>
+        </section>
+
+        <section id="ssh">
+            <h1>ssh</h1>
+            <p>
+                ssh stands for Secure Shell, and is a way to connect to a remote server. It's a way to securely connect
+                to a remote git repository (hosted on GitHub, Bitbucket, etc.) without having to enter your username and
+                password every time you push or pull. Though you should password protect your ssh key, and you will have
+                to enter that password every time. Below are the steps to set up ssh:
+            </p>
+            <ol>
+                <li>Check for existing ssh keys: <code>ls -al ~/.ssh</code></li>
+                <li>Generate a new ssh key: <code></code> </li>
         </section>
 
         <section id="gitignore">
@@ -73,6 +87,12 @@
 
         <section id="clone">
             <h1>clone</h1>
+            <p>
+                Cloning a repository is the act of copying it to your local machine. This is the first step in working on
+                a project that already exists. To clone a repository you need the URL of the repository, and then you
+                simply run the following command in your terminal: <code>git clone URL</code>. This will create a new
+                directory with the name of the repository and copy all of the repo to your local machine.
+            </p>
         </section>
 
     </div>
