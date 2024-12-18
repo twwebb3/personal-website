@@ -29,6 +29,7 @@
             <li><a href="#add">add</a></li>
             <li><a href="#commit">commit</a></li>
             <li><a href="#push">push</a></li>
+            <li><a href="#checkout">checkout</a></li>
             <li><a href="#pull-requests">Pull Requests</a></li>
         </ul>
     </aside>
@@ -91,7 +92,20 @@
                 Cloning a repository is the act of copying it to your local machine. This is the first step in working on
                 a project that already exists. To clone a repository you need the URL of the repository, and then you
                 simply run the following command in your terminal: <code>git clone URL</code>. This will create a new
-                directory with the name of the repository and copy all of the repo to your local machine.
+                directory with the name of the repository and copy the entire repo to your local machine.
+            </p>
+        </section>
+
+        <section id="pull">
+            <h1>pull</h1>
+            <p>
+                <code>git pull</code> is the command to get the latest changes from the remote repository. This is done
+                in terminal in the directory of the local repository. Pulling will merge the changes from the remote
+                repo to your local repo. If there are conflicts, you will have to resolve them before you can push your
+                changes to the remote repo. Do not use <code>git pull</code> if you have uncommitted changes in your
+                local repo. Instead, use <code>git stash</code> to save your changes, then <code>git pull</code>, and
+                finally <code>git stash pop</code> to reapply your changes. It is helpful to pull before you start
+                working on a project to ensure you have the most up-to-date version.
             </p>
         </section>
 
